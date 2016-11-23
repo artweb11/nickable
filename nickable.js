@@ -127,6 +127,7 @@
 					drag.style.left = '';
 					drag.style.top = '';
 				}
+				el.style.webkitBoxShadow = '';
 				drag.removeEventListener( ref.events.mdown, ref.mdown_bind, false );
 				ref.drag_obj = null;
 				//window.removeEventListener('mouseup', ref.mup_bind, false );
