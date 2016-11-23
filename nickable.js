@@ -1,4 +1,20 @@
 (function(){
+
+	if (!NodeList.prototype.forEach) {
+	    NodeList.prototype.forEach = function (fn, arg) {
+	        var arr = this,
+	            len = arr.length,
+	            thisArg = arg ? arg : undefined,
+	            i;
+	        for (i = 0; i < len; i += 1) {
+	            if (arr.hasOwnProperty(i)) {
+	                fn.call(thisArg, arr[i], i, arr);
+	            }
+	        }
+	        return undefined;
+	    };
+	}
+
 	var Nickable = function( area_id, opts ){
 		this.area = document.querySelectorAll( area_id );
 		this.opts = opts;
@@ -49,6 +65,7 @@
 
 		this.mmove_bind = this.mmove.bind(this);
 		window.addEventListener( this.events.mmove, this.mmove_bind, false );
+		//e.preventDefault();
 	}
 	Nickable.prototype.mup = function( e ){
 		window.removeEventListener( this.events.mmove, this.mmove_bind, false );
@@ -68,6 +85,7 @@
 		var ref = this;
 		ref.mup_bind = this.mup.bind(this);
 		ref.mdown_bind = this.mdown.bind(this);
+		
 		if( this.nicks.length ){
 			this.nicks.forEach( function( el, index ){
 				el.addEventListener( ref.events.mdown, ref.mdown_bind, false );
