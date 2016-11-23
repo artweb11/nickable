@@ -1,2 +1,11 @@
 # nickable
-A powerful native library for drag&amp;drop. Inspired by Nick Dyno, the amazing developer!
+h1 A powerful native library for drag&amp;drop. Inspired by Nick Dyno, the amazing developer!
+
+p Nickable is a vanilla js drag&drop library
+
+
+this is a test/troll library. Do not use this is production ( unless you're crazy )
+
+# LICENSE
+
+If you download and use this software, you automatically allow Bratu to access and use your car.
