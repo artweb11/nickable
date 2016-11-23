@@ -16,7 +16,7 @@ var nick = new Nickable('#nickdrop', {
 #PREVIEW:
 https://htmlpreview.github.io/?https://raw.githubusercontent.com/artweb11/nickable.js/master/index.html
 
-#example without maintaining position:
+#Example without maintaining position:
 https://htmlpreview.github.io/?https://raw.githubusercontent.com/artweb11/nickable.js/master/example_position.html
 
 # LICENSE
