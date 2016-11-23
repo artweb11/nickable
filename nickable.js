@@ -112,7 +112,6 @@
 			drag.style.left = obj.left-old.left + 'px';
 			drag.style.top = obj.top-old.top + 'px';
 
-			drag.style.zIndex = '';
 			this.original_parent.appendChild( drag );
 
 			drag.style.webkitTransition = 'all 0.4s linear';
@@ -123,6 +122,7 @@
 			}, 10 );
 			setTimeout( function(){
 				drag.style.webkitTransition = '';
+				drag.style.zIndex = '';
 			}, 500 );
 
 		}
