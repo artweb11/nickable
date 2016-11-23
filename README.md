@@ -7,7 +7,7 @@ Nickable is a vanilla js drag&drop library
 > this is a test/troll library. Do not use this is production ( unless you're crazy )
 
 #PREVIEW:
-https://htmlpreview.github.io/?https://raw.githubusercontent.com/artweb11/nickable.js/master/index.html {:target="_blank"}
+(https://htmlpreview.github.io/?https://raw.githubusercontent.com/artweb11/nickable.js/master/index.html){:target="_blank"}
 
 # LICENSE
 
