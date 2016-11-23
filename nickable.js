@@ -80,6 +80,17 @@
 		//console.log( this );
 		this.drag_obj.style.left = cx-this.mousepos.x+'px';
 		this.drag_obj.style.top = cy-this.mousepos.y+'px';
+
+		var obj = this.drag_obj.getClientRects()[0];
+
+		this.area.forEach( function( el, idx ){
+			var area = el.getClientRects()[0];
+			if( Utils.contains( obj, area ) && (area.width > obj.width) && (area.height > obj.height) ){
+				el.style.webkitBoxShadow = 'inset 0px 0px 74px 0px rgba(0,0,0,0.75)';
+			} else {
+				el.style.webkitBoxShadow = '';
+			}
+		});
 	}
 	Nickable.prototype.add_events = function(){
 		var ref = this;
