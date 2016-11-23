@@ -3,7 +3,8 @@
 		this.area = document.querySelectorAll( area_id );
 		this.opts = opts;
 		this.opts.mobile = !!('ontouchstart' in window);
-		console.log( this.opts.mobile );
+		this.opts.maintain_position = this.opts.maintain_position? this.opts.maintain_position : false;
+		//console.log( this.opts.mobile );
 		this.events = {};
 		this.events.mdown = this.opts.mobile? 'touchstart' : 'mousedown';
 		this.events.mmove = this.opts.mobile? 'touchmove' : 'mousemove';
