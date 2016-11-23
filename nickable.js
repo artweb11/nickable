@@ -20,7 +20,7 @@
 		this.opts = opts;
 		this.opts.mobile = !!('ontouchstart' in window);
 		this.opts.maintain_position = this.opts.maintain_position? this.opts.maintain_position : false;
-		//console.log( this.opts.mobile );
+		console.log( this.opts.mobile );
 		this.events = {};
 		this.events.mdown = this.opts.mobile? 'touchstart' : 'mousedown';
 		this.events.mmove = this.opts.mobile? 'touchmove' : 'mousemove';
@@ -109,6 +109,7 @@
 				el.appendChild( drag );
 				drag.style.position = '';
 				if( ref.opts.maintain_position ){
+					drag.style.position = 'absolute';
 					drag.style.left = obj.left - area.left + 'px';
 					drag.style.top = obj.top - area.top + 'px';
 				} else {
